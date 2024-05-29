@@ -127,3 +127,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+let currentIndex = 0;
+const images = ["imgSite/image0.jpg", "imgSite/image1.jpg", "imgSite/image2.jpg", "imgSite/image3.jpg", "imgSite/image4.jpg", "imgSite/image5.jpg"];
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateSlide();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateSlide();
+}
+
+function updateSlide() {
+    const slideshow = document.getElementById("slideshow");
+    slideshow.style.backgroundImage = `url('${images[currentIndex]}')`;
+}
+
+// Change slide automatically every 5 seconds
+setInterval(nextSlide, 5000);

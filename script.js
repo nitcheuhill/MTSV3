@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
  
+
+
+
     
     // Fonction pour interpeller entre deux couleurs
     function interpolateColor(color1, color2, factor) {
@@ -61,6 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 });
+
+
 
 
 // JavaScript pour activer le carrousel de clients
@@ -125,4 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
 //   });
 // });
 
+
+
+
+// script.js
 
