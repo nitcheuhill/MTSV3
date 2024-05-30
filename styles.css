@@ -11,7 +11,8 @@ body {
 }
 
 header {
-    background-color: #f49657;
+     background-color: #f49657;
+    /* background-color: white;  */
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -890,3 +891,66 @@ footer {
 
 /*  */
 /*  */
+
+
+/* Styles généraux */
+
+ 
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .product-card {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .product-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .product-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* Classes spéciales pour la sérigraphie */
+  .sérigraphie {
+    background-color: #F0F8FF; /* Couleur de fond pour la sérigraphie */
+  }
+  
+  .sérigraphie img {
+    filter: grayscale(0.5); /* Appliquer un filtre de nuance de gris */
+  }
+  
+  .sérigraphie:hover img {
+    filter: grayscale(0); /* Supprimer le filtre de nuance de gris au survol */
+  }
+  
+
+
+  
+
+
+  

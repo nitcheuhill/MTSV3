@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MTS Online</title>
+    <link rel="icon" type="image/png" href="iconSite/favicon-32x32.png">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -41,20 +42,29 @@
     </header>
     <main>
       <section class="section">
-        <h1 style="color: #ff6600" class="title-left">"Guidez votre monde avec clarté."</h1>
+        <h1 style="color: #ff6600" class="title-left">
+          "Guidez votre monde avec clarté."
+        </h1>
         <!-- <h2 style="color: #ff6600">La signaletique</h2> -->
         <div class="offset-printing">
           <div class="description">
-            <p style="text-align: left ; font-family: 'Comic Sans MS', cursive, sans-serif;">
-              La signalétique est l'art de communiquer visuellement pour orienter, 
-              informer et guider les individus dans divers environnements. Qu'il s'agisse
-               de panneaux directionnels, de plaques de porte, de signalisation de sécurité 
-               ou de solutions personnalisées, la signalétique joue un rôle crucial dans la 
-               facilitation des déplacements et l'amélioration de l'expérience utilisateur.
-                Nos produits de signalétique allient esthétique et fonctionnalité pour offrir 
-                des solutions claires, attrayantes et adaptées à chaque besoin. Faites confiance
-                 à notre expertise pour créer des espaces harmonieux et bien organisés, où chaque 
-                 signe mène à une meilleure compréhension et fluidité.
+            <p
+              style="
+                text-align: left;
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+              "
+            >
+              La signalétique est l'art de communiquer visuellement pour
+              orienter, informer et guider les individus dans divers
+              environnements. Qu'il s'agisse de panneaux directionnels, de
+              plaques de porte, de signalisation de sécurité ou de solutions
+              personnalisées, la signalétique joue un rôle crucial dans la
+              facilitation des déplacements et l'amélioration de l'expérience
+              utilisateur. Nos produits de signalétique allient esthétique et
+              fonctionnalité pour offrir des solutions claires, attrayantes et
+              adaptées à chaque besoin. Faites confiance à notre expertise pour
+              créer des espaces harmonieux et bien organisés, où chaque signe
+              mène à une meilleure compréhension et fluidité.
             </p>
           </div>
           <div class="video">
@@ -65,10 +75,91 @@
           </div>
         </div>
       </section>
+
+      <section id="signalétique" style="  display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 0;">
+        <h2 style="margin-bottom: 30px;
+        font-size: 2rem;">Nos support et produits en Signalétique</h2>
+        <div class="product-grid">
+          <div
+            class="product-card sérigraphie"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="0"
+          >
+            <img
+              src="imgSite/badgesBroderie.jpg"
+              alt="Signalétique Sérigraphie 1"
+            />
+            <h3>Impression Sérigraphique</h3>
+            <p>
+              Réalisez des impressions durables et résistantes sur divers
+              supports avec notre expertise en sérigraphie.
+            </p>
+          </div>
+          <div
+            class="product-card sérigraphie"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <img
+              src="imgSite/brochure.jpg"
+              alt="Signalétique Sérigraphie 2"
+            />
+            <h3>Panneaux Signalétiques</h3>
+            <p>
+              Créez des panneaux signalétiques personnalisés et attractifs pour
+              vos besoins intérieurs et extérieurs.
+            </p>
+          </div>
+          <div
+            class="product-card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
+            <img
+              src="imgSite/Billets.jpg"
+              alt="Signalisation"
+            />
+            <h3>Signalisation Routière</h3>
+            <p>
+              Fabriquez des panneaux de signalisation routière conformes aux
+              normes en vigueur.
+            </p>
+          </div>
+          <div
+            class="product-card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="600"
+          >
+            <img
+              src="imgSite/chapeau.jpg"
+              alt="Panneau Publicitaire"
+            />
+            <h3>Panneaux Publicitaires</h3>
+            <p>
+              Réalisez des panneaux publicitaires percutants pour promouvoir
+              votre entreprise.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="printfoot">
       <p>&copy; 2024 Mega Trading & Services. Tous droits réservés.</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          // Options d'initialisation AOS
+        });
+      });
+    </script>
   </body>
 </html>
