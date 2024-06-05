@@ -67,7 +67,7 @@
                 font-size: 3rem;
               "
             >
-              Bienvenue chez vous
+              Bienvenue chez nous
             </h1>
             <h1>
               Votre partenaire pour l'imprimerie, la broderie, sérigraphie,
@@ -228,27 +228,27 @@
         </div>
       </section>
       <section id="contact" class="section">
-        <h2 style="color: #ff6600">- Devenez un de nos clients -</h2>
+        <h2 style="color: #ff6600 ;font-weight: 600; font-size: 30px; margin-bottom: 20px;">- Devenez un de nos clients -</h2>
+        <img src="iconSite/Img-removebg-preview.png" alt="Image description" style="width: 30%; float: left;">
         <form
-          action="mailto:megatradingsarl@gmail.com"
+          action="https://api.web3forms.com/submit"
           method="post"
-          enctype="text/plain"
-          onsubmit="return validateForm()"
         >
-          <label for="name">Nom:</label>
-          <input type="text" id="name" name="name" required />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <label for="tel">Téléphone:</label>
-          <input type="tel" id="tel" name="tel" required />
-          <label for="message">Message:</label>
+          <input type="hidden" name="access_key" value="fb48441e-a576-4900-b214-1bd1fef571f3">
+          <!-- <label for="name">Nom:</label> -->
+          <input type="text" id="name" name="name" required placeholder="Nom"/>
+          <!-- <label for="email">Email:</label> -->
+          <input type="email" id="email" name="email" required placeholder="Email" />
+          <!-- <label for="tel">Téléphone:</label> -->
+          <input type="tel" id="tel" name="tel" required placeholder="Téléphone" />
+          <!-- <label for="message">Message:</label> -->
           <textarea
             id="message"
             name="message"
             required
-            placeholder="Passez votre commande et un correspondant vous contacteras dans les plus bref délais."
+            placeholder="Passez votre commande "
           ></textarea>
-          <button type="submit" class="submit">Envoyer</button>
+          <button type="submit" class="submit">Envoyer  -></button>
         </form>
       </section>
     </main>
@@ -260,7 +260,7 @@
         background-color: rgb(236, 156, 103);
       "
     >
-      <h2 style="color: #ff6600">- Nous joindre: -</h2>
+      <h2 style="color: #ff6600">- Nous joindre -</h2>
       <div class="contact" style="display: flex; justify-content: center">
         <div class="contact-item" style="margin: 0 20px">
           <a href="https://wa.me/237677775331">
@@ -294,11 +294,12 @@
         let currentImageIndex = 0;
         const images = [
           "imgSite/image0.jpg",
-          "imgSite/affiches.jpg",
-          "imgSite/sac.jpg",
+          "imgSite/polo1.jpg",
+          "imgSite/papershoppingbag.jpg",
           "imgSite/magasin.jpg",
           "imgSite/calendrier.jpg",
           "imgSite/emballages.jpg",
+          "imgSite/carteVisite1.jpg"
         ];
 
         const imageContainer = document.getElementById("imageContainer");
