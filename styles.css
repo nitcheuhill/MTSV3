@@ -120,7 +120,7 @@ header {
     .nav-links {
         display: none;
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         /* background-color: #d3d0cd; */
         background-color: #ebd9b4;
         width: 100%;
@@ -549,7 +549,7 @@ footer {
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 20px;
-    background: #fff3e0;
+    background: linear-gradient(130deg, #ffffff 0%, #ff8d4c 100%);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
