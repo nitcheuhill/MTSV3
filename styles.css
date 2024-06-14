@@ -138,6 +138,9 @@ header {
         /* Adjust for header height */
         border-radius: 5px;
     }
+    header {
+        background: linear-gradient(to right, #ff6600, #ffcc00);
+    }
 
     .nav-links.active {
         display: flex;
