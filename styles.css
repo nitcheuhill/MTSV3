@@ -11,8 +11,10 @@ body {
 }
 
 header {
-     background-color: #f49657;
+     /* background-color: #f49657; */
     /* background-color: white;  */
+    background: rgba(255, 109, 26, 0.5);;
+    backdrop-filter: blur(40px);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -92,7 +94,8 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ec9c67;
+    background: rgba(255, 109, 26, 0.5);;
+    backdrop-filter: blur(40px);
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -597,7 +600,7 @@ footer {
 
 .product-description {
     padding: 20px;
-    background: #fff3e0;
+    background: linear-gradient(130deg, #ffffff 0%, #ff8d4c 100%);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 20px;

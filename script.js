@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 // JavaScript pour activer le carrousel de clients
 
     // Récupérer les éléments de produits
