@@ -27,7 +27,11 @@ header {
     z-index: 1000;
     font-family: "Poppins", sans-serif;
 }
-
+@supports not ((backdrop-filter: blur(40px))) {
+    header::backdrop {
+      filter: blur(40px);
+    }
+  }
 .nav-links {
     list-style: none;
     padding: 0;
