@@ -1,5 +1,7 @@
 /*  */
 /* styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -23,6 +25,7 @@ header {
     top: 0;
     width: 98%;
     z-index: 1000;
+    font-family: "Poppins", sans-serif;
 }
 
 .nav-links {
@@ -42,7 +45,7 @@ header {
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .logo-slogan {
