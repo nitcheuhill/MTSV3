@@ -1,15 +1,6 @@
 // script.js
 // script.js
-document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
 
-    burger.addEventListener('click', () => {
-        burger.classList.toggle('open');
-        navLinks.classList.toggle('active');
-    });
-
- 
 
 
 
@@ -63,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     });
-});
 
 
 
@@ -120,18 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // 
-//     const broderieItems = document.querySelectorAll('.broderie-item');
-
-// broderieItems.forEach(item => {
-//   item.addEventListener('click', () => {
-//     // Ouvrir une fenêtre modale ou afficher plus d'informations sur le produit
-//   });
-// });
-
-
-
-
-// script.js
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
+        navLinks.classList.toggle('open');
+        hamburger.classList.toggle('toggle');
+      }
+      
 
 

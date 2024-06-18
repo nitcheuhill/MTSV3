@@ -9,37 +9,38 @@
   </head>
   <body>
     <header>
-      <div class="logo-slogan">
-        <a href="index.html">
-          <img src="logoentreprise\Logo.PNG" alt="Logo de l'entreprise" />
-        </a>
-        <span>Mega Trading & Services</span>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="index.html#about">À propos</a></li>
-          <li class="dropdown">
-            <a href="#services" class="dropbtn">Services</a>
-            <div class="dropdown-content">
-              <a href="Imprimerie.html">Imprimerie</a>
-              <a href="broderie.html">Broderie</a>
-              <a href="serigraphie.html">Sérigraphie</a>
-              <a href="packaging.html">Packaging</a>
-              <a href="signaletique.html">Signalétique</a>
-              <a href="tampographie.html">Tampographie</a>
-            </div>
-          </li>
-          <li><a href="Clients.html">Nos clients</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-    </header>
+      <nav class="navbar">
+           <div class="logo">
+               <a href="index.html">
+                   <img src="logoentreprise\Logo.PNG" alt="Logo" class="logo-img">
+               </a>
+               <span class="company-name">Mega Trading & Services</span>
+           </div>
+           <ul class="nav-links">
+               <li><a href="index.html">Accueil</a></li>
+               <li><a href="index.html#about">A propos</a></li>
+               <li class="dropdown">
+                   <a href="#services" class="dropbtn">Services</a>
+                   <ul class="dropdown-content">
+                    <li><a href="broderie.html">Broderie</a></li>
+                    <li><a href="Imprimerie.html">Imprimerie</a></li>
+                    <li><a href="packaging.html">Packaging</a></li>
+                    <li><a href="serigraphie.html">Sérigraphie</a></li>
+                    <li><a href="signaletique.html">Signalétique</a></li>
+                    <li><a href="tampographie.html">Tampographie</a></li>
+                   </ul>
+               </li>
+               <li><a href="Clients.html">Nos Clients</a></li>
+               <li><a href="index.html#contact">Contact</a></li>
+           </ul>
+           <div class="hamburger" onclick="toggleMenu()">
+               <div class="bar"></div>
+               <div class="bar"></div>
+               <div class="bar"></div>
+           </div>
+       </nav>
+   
+     </header>
     <main>
       <section class="section">
         <h1 style="color: #ff6600" class="title-left">"Emballage qui éblouit, succès garanti!"</h1>
@@ -65,19 +66,19 @@ Avec un packaging signé MTS, faites de votre produit une star sur les étagère
 
       <section id="packaging" class="section">
         <div class="container">
-            <h2>Nos Produits de Packaging</h2>
+            <h2>Nos différents formats de Packaging</h2>
             <div class="product-container">
-                <div class="product">
+                <div class="product" style="width: 350px;">
                     <img src="imgSite\emballages.jpg" alt="Produit de Packaging 1">
                     <h3>Emballages personnalisés</h3>
                     <p>Des emballages uniques conçus pour représenter votre marque et attirer l'attention de vos clients.</p>
                 </div>
-                <div class="product">
+                <div class="product" style="width: 350px;">
                     <img src="imgSite\sac.jpg" alt="Produit de Packaging 2">
                     <h3>Shoppings bags</h3>
                     <p>Des sacs durables et écologiques pour promouvoir votre entreprise et transporter vos produits en toute sécurité.</p>
                 </div>
-                <div class="product">
+                <div class="product" style="width: 350px;">
                     <img src="imgSite\emballagesboite.jpg" alt="Produit de Packaging 3">
                     <h3>Boîtes sur mesure</h3>
                     <p>Des boîtes personnalisées adaptées à vos besoins spécifiques, garantissant une présentation élégante de vos produits.</p>

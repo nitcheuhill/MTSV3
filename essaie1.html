@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-<html lang="fr">
- 
+<html lang="en">
 <head>
-    <title>Responsive nav bar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
     <link rel="stylesheet" href="style2.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
-
 <body>
-    <header class="header">
-        <a href="#" class="logo"> logo</a>
-        <label for="" class="icons">
-            <i class="bx bx-menu"></i>
-        </label>
-        <nav class="navbar">
-            <a href="#">Acceuil</a>
-            <a href="#">A propos</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logoentreprise\Logo.PNG" alt="Logo" class="logo-img">
+            </a>
+            <span class="company-name">Mega Trading & Services</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">A propos</a></li>
+            <li class="dropdown">
+                <a href="#services" class="dropbtn">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="Imprimerie.html">Imprimerie</a></li>
+                    <li><a href="broderie.html">Broderie</a></li>
+                    <li><a href="serigraphie.html">Sérigraphie</a></li>
+                    <li><a href="packaging.html">Signalétique</a></li>
+                    <li><a href="tampographie.html">Tampographie</a></li>
+                </ul>
+            </li>
+            <li><a href="Clients.html">Nos Clients</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
 
-        </nav>
-    </header>
-    
+    <script src="script1.js"></script>
 </body>
 </html>

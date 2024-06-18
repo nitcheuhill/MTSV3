@@ -6,47 +6,50 @@
     <title>MTS Online</title>
     <link rel="icon" type="image/png" href="iconSite/favicon-32x32.png">
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <header>
-      <div class="logo-slogan">
-        <a href="index.html">
-          <img src="logoentreprise\Logo.PNG" alt="Logo de l'entreprise" />
-        </a>
-        <span>Mega Trading & Services</span>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="index.html#about">À propos</a></li>
-          <li class="dropdown">
-            <a href="#services" class="dropbtn">Services</a>
-            <div class="dropdown-content">
-              <a href="Imprimerie.html">Imprimerie</a>
-              <a href="broderie.html">Broderie</a>
-              <a href="serigraphie.html">Sérigraphie</a>
-              <a href="packaging.html">Packaging</a>
-              <a href="signaletique.html">Signalétique</a>
-              <a href="tampographie.html">Tampographie</a>
-            </div>
-          </li>
-          <li><a href="Clients.html">Nos clients</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-    </header>
+      <nav class="navbar">
+           <div class="logo">
+               <a href="index.html">
+                   <img src="logoentreprise\Logo.PNG" alt="Logo" class="logo-img">
+               </a>
+               <span class="company-name">Mega Trading & Services</span>
+           </div>
+           <ul class="nav-links">
+               <li><a href="index.html">Accueil</a></li>
+               <li><a href="index.html#about">A propos</a></li>
+               <li class="dropdown">
+                   <a href="#services" class="dropbtn">Services</a>
+                   <ul class="dropdown-content">
+                    <li><a href="broderie.html">Broderie</a></li>
+                    <li><a href="Imprimerie.html">Imprimerie</a></li>
+                    <li><a href="packaging.html">Packaging</a></li>
+                    <li><a href="serigraphie.html">Sérigraphie</a></li>
+                    <li><a href="signaletique.html">Signalétique</a></li>
+                    <li><a href="tampographie.html">Tampographie</a></li>
+                   </ul>
+               </li>
+               <li><a href="Clients.html">Nos Clients</a></li>
+               <li><a href="index.html#contact">Contact</a></li>
+           </ul>
+           <div class="hamburger" onclick="toggleMenu()">
+               <div class="bar"></div>
+               <div class="bar"></div>
+               <div class="bar"></div>
+           </div>
+       </nav>
+   
+     </header>
     <main>
       <section class="section">
-        <h1 style="color: #ff6600" class="title-left">"Imprimez vos idées, créez vos impressions."</h1>
-        <h2 style="color: #ff6600">Imprimerie Offset</h2>
+        <h1 style="color: #ff6600" class="title-left">"Imprimez vos idées, créez vos impressions avec l'offset."</h1>
+        <!-- <h2 style="color: #ff6600">Imprimerie Offset</h2> -->
         <div class="offset-printing">
           <div class="description">
-            <h4 style="text-align: left">
+            <p style="text-align: left; font-family: 'Poppins', sans-serif">
               Imprimerie offset : Des chefs-d'œuvre en série ! Rapide,
               économique, et de qualité irréprochable, l'impression offset est
               idéale pour vos projets ambitieux. Affiches, brochures, magazines,
@@ -59,7 +62,7 @@
               ce soit pour des brochures, des affiches, des cartes de visite ou
               tout autre type de support, notre équipe est là pour vous fournir
               des résultats impeccables.
-            </h4>
+            </p>
           </div>
           <div class="video">
             <video controls muted>
@@ -144,16 +147,8 @@
               L'impression numérique : Une technologie révolutionnaire au
               service de votre communication
             </h1>
-            <h3 style="text-align: left">
-              L'impression numérique est un procédé d'impression qui utilise des
-              technologies numériques pour créer des images et des textes
-              directement à partir de fichiers informatiques. Contrairement aux
-              méthodes d'impression traditionnelles, qui reposent sur des
-              plaques physiques ou des moules, l'impression numérique utilise
-              des processus électrostatiques, à jet d'encre ou laser pour
-              transférer des images numériques sur un support d'impression.
-            </h3>
-            <p style="text-align: left">
+            <p  style="text-align: left; font-family: 'Poppins', sans-serif">
+
               Cette technologie offre de nombreux avantages par rapport aux
               méthodes d'impression traditionnelles, notamment : Une qualité
               d'impression supérieure : L'impression numérique permet d'obtenir

@@ -11,36 +11,37 @@
 
 <body>
   <header>
-    <div class="logo-slogan">
-      <a href="index.html">
-        <img src="logoentreprise\Logo.PNG" alt="Logo de l'entreprise" />
-      </a>
-      <span>Mega Trading & Services</span>
-    </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home">Accueil</a></li>
-        <li><a href="#about">À propos</a></li>
-        <li class="dropdown">
-          <a href="#services" class="dropbtn">Services</a>
-          <div class="dropdown-content" id="service-dropdown-content">
-            <a href="Imprimerie.html">Imprimerie</a>
-            <a href="broderie.html">Broderie</a>
-            <a href="serigraphie.html">Sérigraphie</a>
-            <a href="packaging.html">Packaging</a>
-            <a href="signaletique.html">Signalétique</a>
-            <a href="tampographie.html">Tampographie</a>
-          </div>
-        </li>
-        <li><a href="Clients.html">Nos clients</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
+   <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logoentreprise\Logo.PNG" alt="Logo" class="logo-img">
+            </a>
+            <span class="company-name">Mega Trading & Services</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">A propos</a></li>
+            <li class="dropdown">
+                <a href="#services" class="dropbtn">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="broderie.html">Broderie</a></li>
+                    <li><a href="Imprimerie.html">Imprimerie</a></li>
+                    <li><a href="packaging.html">Packaging</a></li>
+                    <li><a href="serigraphie.html">Sérigraphie</a></li>
+                    <li><a href="signaletique.html">Signalétique</a></li>
+                    <li><a href="tampographie.html">Tampographie</a></li>
+                </ul>
+            </li>
+            <li><a href="Clients.html">Nos Clients</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </nav>
+
     <script>
       const links = document.querySelectorAll('.nav-links a[href^="#"]');
 
@@ -72,7 +73,7 @@
                 </div>
         
                 <div class="image-container">
-                    <img src="imgSite/image0.jpg" alt="Imprimante Offset">
+                    <img src="imgSite/image0.jpg" alt="Impriman te Offset">
                 </div>
      
             </div>
@@ -86,6 +87,8 @@
                 background-clip: text;
                 color: transparent;
                 font-size: 3rem;
+                margin-top: 5%;
+                padding: 2%;
               ">
             Bienvenue chez nous
           </h1>
@@ -104,7 +107,7 @@
     <section id="about" class="section">
       <div class="about-us">
         <div class="description">
-          <h2 style="color: #ff6600">À propos de nous</h2>
+          <h2 style="color: #ff6600; padding: 25px;margin-top: 10px;">À propos de nous</h2>
           <p style="text-align: left">
             Depuis 15 ans nous mettons tout notre expertise au service de
             notre clientèle. Nous étudions et travaillons continuellement pour
@@ -128,7 +131,6 @@
                 height: 90%;
                 width: 100%;
                 margin-top: 5px;
-                border: 6px solid;
               " center=position allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
@@ -174,7 +176,7 @@
       <h2 style="color: #ff6600">Commandes populaires</h2>
       <div class="product-gallery">
         <!-- Les produits seront affichés ici -->
-        <div class="product" onclick="showProductDescription('product4')"
+        <div class="product"  onclick="showProductDescription('product4')"
           data-description="Des formulaires sur mesure : Simplifiez vos démarches et boostez votre productivité !
 
             Dites adieu aux formulaires papier fastidieux et inefficaces. Optez pour des formulaires sur mesure qui s'adaptent parfaitement à vos besoins et à vos exigences.">
@@ -268,6 +270,7 @@
     <p>&copy; 2024 Mega Trading & Services. Tous droits réservés.</p>
   </footer>
   <script src="script.js"></script>
+  <!-- <script src="script1.js"></script> -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       let currentImageIndex = 0;

@@ -9,37 +9,38 @@
   </head>
   <body>
     <header>
-      <div class="logo-slogan">
-        <a href="index.html">
-          <img src="logoentreprise\Logo.PNG" alt="Logo de l'entreprise" />
-        </a>
-        <span>Mega Trading & Services</span>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="index.html#about">À propos</a></li>
-          <li class="dropdown">
-            <a href="#services" class="dropbtn">Services</a>
-            <div class="dropdown-content">
-              <a href="Imprimerie.html">Imprimerie</a>
-              <a href="broderie.html">Broderie</a>
-              <a href="serigraphie.html">Sérigraphie</a>
-              <a href="packaging.html">Packaging</a>
-              <a href="signaletique.html">Signalétique</a>
-              <a href="tampographie.html">Tampographie</a>
-            </div>
-          </li>
-          <li><a href="Clients.html">Nos clients</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-    </header>
+      <nav class="navbar">
+           <div class="logo">
+               <a href="index.html">
+                   <img src="logoentreprise\Logo.PNG" alt="Logo" class="logo-img">
+               </a>
+               <span class="company-name">Mega Trading & Services</span>
+           </div>
+           <ul class="nav-links">
+               <li><a href="index.html">Accueil</a></li>
+               <li><a href="index.html#about">A propos</a></li>
+               <li class="dropdown">
+                   <a href="#services" class="dropbtn">Services</a>
+                   <ul class="dropdown-content">
+                    <li><a href="broderie.html">Broderie</a></li>
+                    <li><a href="Imprimerie.html">Imprimerie</a></li>
+                    <li><a href="packaging.html">Packaging</a></li>
+                    <li><a href="serigraphie.html">Sérigraphie</a></li>
+                    <li><a href="signaletique.html">Signalétique</a></li>
+                    <li><a href="tampographie.html">Tampographie</a></li>
+                   </ul>
+               </li>
+               <li><a href="Clients.html">Nos Clients</a></li>
+               <li><a href="index.html#contact">Contact</a></li>
+           </ul>
+           <div class="hamburger" onclick="toggleMenu()">
+               <div class="bar"></div>
+               <div class="bar"></div>
+               <div class="bar"></div>
+           </div>
+       </nav>
+   
+     </header>
     <main>
       <section class="section">
         <h1 style="color: #ff6600" class="title-left">"Imprimez l'exceptionnel, marquez la différence."</h1>
