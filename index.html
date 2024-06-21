@@ -1,71 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MTS Online</title>
+    <link rel="icon" type="image/png" href="iconSite/favicon-32x32.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MTS Online</title>
-  <link rel="icon" type="image/png" href="iconSite/favicon-32x32.png" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-  <header>
-   <nav class="navbar">
+  <body>
+    <header>
+      <nav class="navbar">
         <div class="logo">
-            <a href="index.html">
-                <img src="logoentreprise\Logo.PNG" alt="Logo" class="logo-img">
-            </a>
-            <span class="company-name">Mega Trading & Services</span>
+          <a href="index.html">
+            <img src="logoentreprise\Logo.PNG" alt="Logo" class="logo-img" />
+          </a>
+          <span class="company-name">Mega Trading & Services</span>
         </div>
         <ul class="nav-links">
-            <li><a href="#home">Accueil</a></li>
-            <li><a href="#about">A propos</a></li>
-            <li class="dropdown">
-                <a href="#services" class="dropbtn">Services</a>
-                <ul class="dropdown-content">
-                    <li><a href="broderie.html">Broderie</a></li>
-                    <li><a href="Imprimerie.html">Imprimerie</a></li>
-                    <li><a href="packaging.html">Packaging</a></li>
-                    <li><a href="serigraphie.html">Sérigraphie</a></li>
-                    <li><a href="signaletique.html">Signalétique</a></li>
-                    <li><a href="tampographie.html">Tampographie</a></li>
-                </ul>
-            </li>
-            <li><a href="Clients.html">Nos Clients</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#about">A propos</a></li>
+          <li class="dropdown">
+            <a href="#services" id="services-btn" class="dropbtn">Services</a>
+            <ul class="dropdown-content" id="services-dropdown">
+              <li><a href="broderie.html">Broderie</a></li>
+              <li><a href="Imprimerie.html">Imprimerie</a></li>
+              <li><a href="packaging.html">Packaging</a></li>
+              <li><a href="serigraphie.html">Sérigraphie</a></li>
+              <li><a href="signaletique.html">Signalétique</a></li>
+              <li><a href="tampographie.html">Tampographie</a></li>
+            </ul>
+          </li>
+          <li><a href="Clients.html">Nos Clients</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="hamburger" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
-    </nav>
+      </nav>
+      <script>
+        //
+        //
+        //
+        document.addEventListener("DOMContentLoaded", (event) => {
+          const servicesBtn = document.getElementById("services-btn");
+          const servicesDropdown = document.getElementById("services-dropdown");
 
-    <script>
-      const links = document.querySelectorAll('.nav-links a[href^="#"]');
+          servicesBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            servicesDropdown.classList.toggle("show");
+          });
 
-      for (const link of links) {
-        link.addEventListener('click', function (event) {
-          event.preventDefault(); // Empêche le comportement par défaut du lien
-
-          const targetId = this.getAttribute('href'); // Récupère l'ID de la section cible
-          const targetElement = document.querySelector(targetId); // Sélectionne l'élément cible
-
-          if (targetElement) { // Vérifie si l'élément cible existe
-            const yOffset = targetElement.getBoundingClientRect().top; // Obtient la position verticale de l'élément cible
-            window.scrollTo({
-              top: yOffset, // Défile la page vers la position verticale de l'élément cible
-              behavior: 'smooth' // Défilement fluide
-            });
-          }
+          window.addEventListener("click", function (event) {
+            if (
+              !servicesBtn.contains(event.target) &&
+              !servicesDropdown.contains(event.target)
+            ) {
+              servicesDropdown.classList.remove("show");
+            }
+          });
         });
-      }
 
-    </script>
-  </header>
-  <main>
-    <!-- <section id="home" class="section">
+        function toggleMenu() {
+          const navLinks = document.querySelector(".nav-links");
+          const hamburger = document.querySelector(".hamburger");
+          navLinks.classList.toggle("open");
+          hamburger.classList.toggle("toggle");
+        }
+      </script>
+      <script>
+        const links = document.querySelectorAll('.nav-links a[href^="#"]');
+
+        for (const link of links) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault(); // Empêche le comportement par défaut du lien
+
+            const targetId = this.getAttribute("href"); // Récupère l'ID de la section cible
+            const targetElement = document.querySelector(targetId); // Sélectionne l'élément cible
+
+            if (targetElement) {
+              // Vérifie si l'élément cible existe
+              const yOffset = targetElement.getBoundingClientRect().top; // Obtient la position verticale de l'élément cible
+              window.scrollTo({
+                top: yOffset, // Défile la page vers la position verticale de l'élément cible
+                behavior: "smooth", // Défilement fluide
+              });
+            }
+          });
+        }
+      </script>
+    </header>
+    <main>
+      <!-- <section id="home" class="section">
             <div class="intro">
                 <div class="intro-text">
                     <h1 style="background:linear-gradient(to right, #ff6600, #ffcc00) ;background-clip: text ; color:transparent; font-size: 3rem;">Bienvenue chez vous</h1>
@@ -79,239 +107,311 @@
             </div>
         </section> -->
 
-    <section id="home" class="section">
-      <div class="intro">
-        <div class="intro-text">
-          <h1 style="
+      <section id="home" class="section">
+        <div class="intro">
+          <div class="intro-text">
+            <h1
+              style="
                 background: linear-gradient(to right, #ff6600, #ffcc00);
                 background-clip: text;
                 color: transparent;
                 font-size: 3rem;
                 margin-top: 5%;
                 padding: 2%;
-              ">
-            Bienvenue chez nous
-          </h1>
-          <h1>
-            Votre partenaire pour l'imprimerie, la broderie, sérigraphie,
-            packaging, signalétique, et tampographie.
-          </h1>
+              "
+            >
+              Bienvenue chez nous
+            </h1>
+            <h1>
+              Votre partenaire pour l'imprimerie, la broderie, sérigraphie,
+              packaging, signalétique, et tampographie.
+            </h1>
+          </div>
+          <div
+            class="image-container"
+            id="imageContainer"
+            style="background-image: url('imgSite/image0.jpg')"
+          >
+            <div class="arrow left" onclick="prevImage()">&#10094;</div>
+            <div class="arrow right" onclick="nextImage()">&#10095;</div>
+          </div>
         </div>
-        <div class="image-container" id="imageContainer" style="background-image: url('imgSite/image0.jpg')">
-          <div class="arrow left" onclick="prevImage()">&#10094;</div>
-          <div class="arrow right" onclick="nextImage()">&#10095;</div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="about" class="section">
-      <div class="about-us">
-        <div class="description">
-          <h2 style="color: #ff6600; padding: 25px;margin-top: 10px;">À propos de nous</h2>
-          <p style="text-align: left">
-            Depuis 15 ans nous mettons tout notre expertise au service de
-            notre clientèle. Nous étudions et travaillons continuellement pour
-            vous offrir les meilleurs techniques pour parfaire vos imprimés.
-            Nous donnons ainsi la possibilité à tout type d'entreprises,
-            organisations, personnes physiques de mieux communiqué avec son
-            public même sans être présent. Toujours attentifs à l'emergence
-            des nouvelles techniques et à l'évolution des technologies pour
-            les impression et marquage... nous saurons vous conseiller et vous
-            accompagner dans une démarche globale d'analyse de vos attentes,
-            proposition par simulations informatiques et réalisations du
-            projet final.
-          </p>
-        </div>
-        <div class="map">
-          <!-- Intégrer une carte ici -->
-          <iframe id="mapIframe"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3979.8927900612543!2d9.697039474420828!3d4.042294995931454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2scm!4v1717136594095!5m2!1sfr!2scm&markers=color:red%7C4.042294995931454,9.697039474420828&q=megatradingsarl&services"
-            style="
+      <section id="about" class="section">
+        <div class="about-us">
+          <div class="description">
+            <h2 style="color: #ff6600; padding: 25px; margin-top: 10px">
+              À propos de nous
+            </h2>
+            <p style="text-align: left">
+              Depuis 15 ans nous mettons tout notre expertise au service de
+              notre clientèle. Nous étudions et travaillons continuellement pour
+              vous offrir les meilleurs techniques pour parfaire vos imprimés.
+              Nous donnons ainsi la possibilité à tout type d'entreprises,
+              organisations, personnes physiques de mieux communiqué avec son
+              public même sans être présent. Toujours attentifs à l'emergence
+              des nouvelles techniques et à l'évolution des technologies pour
+              les impression et marquage... nous saurons vous conseiller et vous
+              accompagner dans une démarche globale d'analyse de vos attentes,
+              proposition par simulations informatiques et réalisations du
+              projet final.
+            </p>
+          </div>
+          <div class="map">
+            <!-- Intégrer une carte ici -->
+            <iframe
+              id="mapIframe"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3979.8927900612543!2d9.697039474420828!3d4.042294995931454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2scm!4v1717136594095!5m2!1sfr!2scm&markers=color:red%7C4.042294995931454,9.697039474420828&q=megatradingsarl&services"
+              style="
                 border-radius: 8px;
                 height: 90%;
                 width: 100%;
                 margin-top: 5px;
-              " center=position allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+              "
+              center="position"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
-      </div>
-    </section>
-    <section id="hours" class="section">
-      <h2 style="color: #ff6600">Nos Horaires</h2>
-      <ul class="timeline">
-        <li>
-          <span class="day">Lundi:</span>
-          <div class="progress" style="width: 30%"></div>
-          08h00 - 17h00
-        </li>
-        <li>
-          <span class="day">Mardi:</span>
-          <div class="progress" style="width: 30%"></div>
-          08h00 - 17h00
-        </li>
-        <li>
-          <span class="day">Mercredi:</span>
-          <div class="progress" style="width: 30%"></div>
-          08h00 - 17h00
-        </li>
-        <li>
-          <span class="day">Jeudi:</span>
-          <div class="progress" style="width: 30%"></div>
-          08h00 - 17h00
-        </li>
-        <li>
-          <span class="day">Vendredi:</span>
-          <div class="progress" style="width: 30%"></div>
-          08h00 - 17h00
-        </li>
-        <li>
-          <span class="day">Samedi:</span>
-          <div class="progress" style="width: 30%"></div>
-          09h00 - 14h00
-        </li>
-      </ul>
-    </section>
+      </section>
+      <section id="hours" class="section">
+        <h2 style="color: #ff6600">Nos Horaires</h2>
+        <ul class="timeline">
+          <li>
+            <span class="day">Lundi:</span>
+            <div class="progress" style="width: 30%"></div>
+            08h00 - 17h00
+          </li>
+          <li>
+            <span class="day">Mardi:</span>
+            <div class="progress" style="width: 30%"></div>
+            08h00 - 17h00
+          </li>
+          <li>
+            <span class="day">Mercredi:</span>
+            <div class="progress" style="width: 30%"></div>
+            08h00 - 17h00
+          </li>
+          <li>
+            <span class="day">Jeudi:</span>
+            <div class="progress" style="width: 30%"></div>
+            08h00 - 17h00
+          </li>
+          <li>
+            <span class="day">Vendredi:</span>
+            <div class="progress" style="width: 30%"></div>
+            08h00 - 17h00
+          </li>
+          <li>
+            <span class="day">Samedi:</span>
+            <div class="progress" style="width: 30%"></div>
+            09h00 - 14h00
+          </li>
+        </ul>
+      </section>
 
-    <section class="section">
-      <h2 style="color: #ff6600">Commandes populaires</h2>
-      <div class="product-gallery">
-        <!-- Les produits seront affichés ici -->
-        <div class="product"  onclick="showProductDescription('product4')"
-          data-description="Des formulaires sur mesure : Simplifiez vos démarches et boostez votre productivité !
+      <section class="section">
+        <h2 style="color: #ff6600">Commandes populaires</h2>
+        <div class="product-gallery">
+          <!-- Les produits seront affichés ici -->
+          <div
+            class="product"
+            onclick="showProductDescription('product4')"
+            data-description="Des formulaires sur mesure : Simplifiez vos démarches et boostez votre productivité !
 
-            Dites adieu aux formulaires papier fastidieux et inefficaces. Optez pour des formulaires sur mesure qui s'adaptent parfaitement à vos besoins et à vos exigences.">
-          <img src="imgSite\formulaires.jpg" alt="Produit 4" />
-          <p>Formulaires et carnet de reçu</p>
-        </div>
+            Dites adieu aux formulaires papier fastidieux et inefficaces. Optez pour des formulaires sur mesure qui s'adaptent parfaitement à vos besoins et à vos exigences."
+          >
+            <img src="imgSite\formulaires.jpg" alt="Produit 4" />
+            <p>Formulaires et carnet de reçu</p>
+          </div>
 
-        <div class="product" onclick="showProductDescription('product6')" data-description="Le nouvel an.">
-          <img src="imgSite\calendrier.jpg" alt="Produit 6" />
-          <p>Calendrier</p>
-        </div>
+          <div
+            class="product"
+            onclick="showProductDescription('product6')"
+            data-description="Le nouvel an."
+          >
+            <img src="imgSite\calendrier.jpg" alt="Produit 6" />
+            <p>Calendrier</p>
+          </div>
 
-        <div class="product" onclick="showProductDescription('product1')"
-          data-description="Sublimez vos murs avec des affiches et posters qui vous ressemblent !">
-          <img src="imgSite\affiches.jpg" alt="Produit 1" />
-          <p>Affiches et posters</p>
-        </div>
-        <div class="product" onclick="showProductDescription('product2')"
-          data-description="Des cartes de visite qui font mouche !
+          <div
+            class="product"
+            onclick="showProductDescription('product1')"
+            data-description="Sublimez vos murs avec des affiches et posters qui vous ressemblent !"
+          >
+            <img src="imgSite\affiches.jpg" alt="Produit 1" />
+            <p>Affiches et posters</p>
+          </div>
+          <div
+            class="product"
+            onclick="showProductDescription('product2')"
+            data-description="Des cartes de visite qui font mouche !
 
-            Votre première impression est la plus importante. Offrez à vos contacts une carte de visite qui vous ressemble et qui vous démarque.">
-          <img src="imgSite\carte de visite.jpg" alt="Produit 2" />
-          <p>Cartes de visite</p>
-        </div>
-        <div class="product" onclick="showProductDescription('product3')"
-          data-description="Des sacs durables et écologiques pour promouvoir votre entreprise et transporter vos produits en toute sécurité">
-          <img src="imgSite\sac.jpg" alt="Produit 3" />
-          <p>Shoppings Bags</p>
-        </div>
-        <!-- <div class="product" onclick="showProductDescription('product3')" data-description="Etiquettes et emballages : Habillez vos produits avec élégance et distinction !
+            Votre première impression est la plus importante. Offrez à vos contacts une carte de visite qui vous ressemble et qui vous démarque."
+          >
+            <img src="imgSite\carte de visite.jpg" alt="Produit 2" />
+            <p>Cartes de visite</p>
+          </div>
+          <div
+            class="product"
+            onclick="showProductDescription('product3')"
+            data-description="Des sacs durables et écologiques pour promouvoir votre entreprise et transporter vos produits en toute sécurité"
+          >
+            <img src="imgSite\sac.jpg" alt="Produit 3" />
+            <p>Shoppings Bags</p>
+          </div>
+          <!-- <div class="product" onclick="showProductDescription('product3')" data-description="Etiquettes et emballages : Habillez vos produits avec élégance et distinction !
 
             Valorisez votre marque et boostez vos ventes avec des étiquettes et emballages sur mesure qui attirent l'attention et suscitent le désir.">
                 <img src="etiquettes.jpg" alt="Produit 3">
                 <p>Etiquettes et emballages</p>
             </div>
       -->
-        <div class="product" onclick="showProductDescription('product5')"
-          data-description="Votre vêtement vous définit personnalisez votre image chez nous.">
-          <img src="imgSite\tshirt.jpg" alt="Produit 5" />
-          <p>Tshirt et casquette personnalisée</p>
+          <div
+            class="product"
+            onclick="showProductDescription('product5')"
+            data-description="Votre vêtement vous définit personnalisez votre image chez nous."
+          >
+            <img src="imgSite\tshirt.jpg" alt="Produit 5" />
+            <p>Tshirt et casquette personnalisée</p>
+          </div>
         </div>
-      </div>
-      <div id="product-description" class="product-description">
-        Cliquez sur un produit pour voir la description.
-      </div>
-    </section>
-    <section id="contact" class="section">
-      <h2 style="color: #ff6600 ;font-weight: 600; font-size: 30px; margin-bottom: 20px;">- Devenez un de nos clients -
-      </h2>
-      <img src="iconSite/Img-removebg-preview.png" alt="Image description" style="width: 30%; float: left;">
-      <form action="https://api.web3forms.com/submit" method="post">
-        <input type="hidden" name="access_key" value="1eb11de0-bf8b-41c1-966f-61df71127b80">
-        <!-- <label for="name">Nom:</label> -->
-        <input type="text" id="name" name="name" required placeholder="Nom" />
-        <!-- <label for="email">Email:</label> -->
-        <input type="email" id="email" name="email" required placeholder="Email" />
-        <!-- <label for="tel">Téléphone:</label> -->
-        <input type="tel" id="tel" name="tel" required placeholder="Téléphone" />
-        <!-- <label for="message">Message:</label> -->
-        <textarea id="message" name="message" required placeholder="Passez votre commande "></textarea>
-        <button type="submit" class="submit">Envoyer -></button>
-      </form>
-    </section>
-  </main>
+        <div id="product-description" class="product-description">
+          Cliquez sur un produit pour voir la description.
+        </div>
+      </section>
+      <section id="contact" class="section">
+        <h2
+          style="
+            color: #ff6600;
+            font-weight: 600;
+            font-size: 30px;
+            margin-bottom: 20px;
+          "
+        >
+          - Devenez un de nos clients -
+        </h2>
+        <img
+          src="iconSite/Img-removebg-preview.png"
+          alt="Image description"
+          style="width: 30%; float: left"
+        />
+        <form action="https://api.web3forms.com/submit" method="post">
+          <input
+            type="hidden"
+            name="access_key"
+            value="1eb11de0-bf8b-41c1-966f-61df71127b80"
+          />
+          <!-- <label for="name">Nom:</label> -->
+          <input type="text" id="name" name="name" required placeholder="Nom" />
+          <!-- <label for="email">Email:</label> -->
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Email"
+          />
+          <!-- <label for="tel">Téléphone:</label> -->
+          <input
+            type="tel"
+            id="tel"
+            name="tel"
+            required
+            placeholder="Téléphone"
+          />
+          <!-- <label for="message">Message:</label> -->
+          <textarea
+            id="message"
+            name="message"
+            required
+            placeholder="Passez votre commande "
+          ></textarea>
+          <button type="submit" class="submit">Envoyer</button>
+        </form>
+      </section>
+    </main>
 
-  <footer style="
+    <footer
+      style="
         padding: 20px 0;
         text-align: center;
         background-color: rgb(236, 156, 103);
-      ">
-    <h2 style="color: #ff6600">- Nous joindre -</h2>
-    <div class="contact" style="display: flex; justify-content: center">
-      <div class="contact-item" style="margin: 0 20px">
-        <a href="https://wa.me/237677775331">
-          <img style="width: 60px; height: auto; margin-bottom: 10px" src="iconSite\icons8-whatsapp-48.png"
-            alt="WhatsApp Logo" />
-          <!-- <p style="color:rgb(102, 102, 228);">WhatsApp : +237677775331</p> -->
-        </a>
+      "
+    >
+      <h2 style="color: #ff6600">- Nous joindre -</h2>
+      <div class="contact" style="display: flex; justify-content: center">
+        <div class="contact-item" style="margin: 0 20px">
+          <a href="https://wa.me/237677775331">
+            <img
+              style="width: 60px; height: auto; margin-bottom: 10px"
+              src="iconSite\icons8-whatsapp-48.png"
+              alt="WhatsApp Logo"
+            />
+            <!-- <p style="color:rgb(102, 102, 228);">WhatsApp : +237677775331</p> -->
+          </a>
+        </div>
+        <div class="contact-item" style="margin: 0 20px">
+          <a href="mailto:megatradingsarl@gmail.com">
+            <img
+              style="width: 60px; height: auto; margin-bottom: 10px"
+              src="iconSite\icons8-nouveau-message-50.png"
+              alt="Email Logo"
+            />
+            <!-- <p style="color:rgb(102, 102, 228);">Email : megatradingsarl@gmail.com</p> -->
+          </a>
+        </div>
       </div>
-      <div class="contact-item" style="margin: 0 20px">
-        <a href="mailto:megatradingsarl@gmail.com">
-          <img style="width: 60px; height: auto; margin-bottom: 10px" src="iconSite\icons8-nouveau-message-50.png"
-            alt="Email Logo" />
-          <!-- <p style="color:rgb(102, 102, 228);">Email : megatradingsarl@gmail.com</p> -->
-        </a>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <footer>
-    <p>&copy; 2024 Mega Trading & Services. Tous droits réservés.</p>
-  </footer>
-  <script src="script.js"></script>
-  <!-- <script src="script1.js"></script> -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      let currentImageIndex = 0;
-      const images = [
-        "imgSite/image0.jpg",
-        "imgSite/polo1.jpg",
-        "imgSite/papershoppingbag.jpg",
-        "imgSite/magasin.jpg",
-        "imgSite/calendrier.jpg",
-        "imgSite/emballages.jpg",
-        "imgSite/carteVisite1.jpg"
-      ];
+    <footer>
+      <p>&copy; 2024 Mega Trading & Services. Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+    <!-- <script src="script1.js"></script> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let currentImageIndex = 0;
+        const images = [
+          "imgSite/image0.jpg",
+          "imgSite/polo1.jpg",
+          "imgSite/papershoppingbag.jpg",
+          "imgSite/magasin.jpg",
+          "imgSite/calendrier.jpg",
+          "imgSite/emballages.jpg",
+          "imgSite/carteVisite1.jpg",
+        ];
 
-      const imageContainer = document.getElementById("imageContainer");
+        const imageContainer = document.getElementById("imageContainer");
 
-      function changeImage(index) {
-        imageContainer.style.backgroundImage = `url(${images[index]})`;
-      }
+        function changeImage(index) {
+          imageContainer.style.backgroundImage = `url(${images[index]})`;
+        }
 
-      function nextImage() {
-        currentImageIndex = (currentImageIndex + 1) % images.length;
+        function nextImage() {
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+          changeImage(currentImageIndex);
+        }
+
+        function prevImage() {
+          currentImageIndex =
+            (currentImageIndex - 1 + images.length) % images.length;
+          changeImage(currentImageIndex);
+        }
+
+        // Change image every 5 seconds
+        setInterval(nextImage, 5000);
+
+        // Optional: Initialize with the first image
         changeImage(currentImageIndex);
-      }
 
-      function prevImage() {
-        currentImageIndex =
-          (currentImageIndex - 1 + images.length) % images.length;
-        changeImage(currentImageIndex);
-      }
-
-      // Change image every 5 seconds
-      setInterval(nextImage, 5000);
-
-      // Optional: Initialize with the first image
-      changeImage(currentImageIndex);
-
-      // Make functions available globally
-      window.nextImage = nextImage;
-      window.prevImage = prevImage;
-    });
-  </script>
-</body>
-
+        // Make functions available globally
+        window.nextImage = nextImage;
+        window.prevImage = prevImage;
+      });
+    </script>
+  </body>
 </html>

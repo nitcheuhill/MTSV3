@@ -20,8 +20,8 @@
                <li><a href="index.html">Accueil</a></li>
                <li><a href="index.html#about">A propos</a></li>
                <li class="dropdown">
-                   <a href="#services" class="dropbtn">Services</a>
-                   <ul class="dropdown-content">
+                <a href="#services" id="services-btn" class="dropbtn">Services</a>
+                <ul class="dropdown-content" id="services-dropdown">
                     <li><a href="broderie.html">Broderie</a></li>
                     <li><a href="Imprimerie.html">Imprimerie</a></li>
                     <li><a href="packaging.html">Packaging</a></li>
@@ -39,7 +39,36 @@
                <div class="bar"></div>
            </div>
        </nav>
-   
+       <script>
+        //
+        //
+        //
+        document.addEventListener("DOMContentLoaded", (event) => {
+          const servicesBtn = document.getElementById("services-btn");
+          const servicesDropdown = document.getElementById("services-dropdown");
+
+          servicesBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            servicesDropdown.classList.toggle("show");
+          });
+
+          window.addEventListener("click", function (event) {
+            if (
+              !servicesBtn.contains(event.target) &&
+              !servicesDropdown.contains(event.target)
+            ) {
+              servicesDropdown.classList.remove("show");
+            }
+          });
+        });
+
+        function toggleMenu() {
+          const navLinks = document.querySelector(".nav-links");
+          const hamburger = document.querySelector(".hamburger");
+          navLinks.classList.toggle("open");
+          hamburger.classList.toggle("toggle");
+        }
+      </script>
      </header>
     <main>
       <section class="section">
@@ -82,7 +111,7 @@
       align-items: center;
       padding: 50px 0;">
         <h2 style="margin-bottom: 30px;
-        font-size: 2rem;">Nos support et produits en Signalétique</h2>
+        font-size: 1.5rem; color: #ff6600;">Nos supports en signalétique</h2>
         <div class="product-grid">
           <div
             class="product-card sérigraphie"
