@@ -6,6 +6,7 @@
     <title>MTS Online</title>
     <link rel="icon" type="image/png" href="iconSite/favicon-32x32.png">
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -77,7 +78,7 @@
         <!-- <h2 style="color: #ff6600">La tampographie</h2> -->
         <div class="offset-printing">
           <div class="description">
-            <p style="text-align: left; font-family: 'Comic Sans MS', cursive, sans-serif;">
+            <p style="text-align: left; font-family: 'Poppins', sans-serif;">
               La tampographie est une méthode d'impression polyvalente et précise, idéale pour 
               transférer des motifs complexes et multicolores sur des surfaces irrégulières, 
               courbes ou texturées. Utilisée largement dans les secteurs de l'électronique, des jouets,
@@ -97,8 +98,43 @@
           </div>
         </div>
       </section>
+      <h2 style="margin-bottom: 30px;
+        font-size: 1.5rem; color: #ff6600;text-align: center;">Nos supports et produits en tampographie</h2>
+      <section class="tampographie-section">
+        
+        <div class="product-card">
+            <img src="imgSite/affiche1.jpg" alt="Produit 1" class="product-image">
+            <h3 class="product-name">Produit 1</h3>
+            <p class="product-description7">Description du produit 1.</p>
+        </div>
+        <div class="product-card">
+            <img src="imgSite/badges3.jpg" alt="Produit 2" class="product-image">
+            <h3 class="product-name">Produit 2</h3>
+            <p class="product-description7">Description du produit 2.</p>
+        </div>
+        <div class="product-card">
+            <img src="imgSite/sac.jpg" alt="Produit 2" class="product-image">
+            <h3 class="product-name">Produit 2</h3>
+            <p class="product-description7">Description du produit 3.</p>
+        </div>
+        <!-- Ajoutez autant de cartes de produit que nécessaire -->
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+    const productCards = document.querySelectorAll('.product-card');
 
-      
+    productCards.forEach(card => {
+        card.addEventListener('mouseover', () => {
+            card.classList.add('hover');
+        });
+
+        card.addEventListener('mouseout', () => {
+            card.classList.remove('hover');
+        });
+    });
+});
+
+    </script>
 
     </main>
     <footer class="printfoot">
