@@ -134,7 +134,7 @@ body {
  
     .dropdown-content{
         background:  linear-gradient(to right, #ff6600, #ffcc00);
-        width: 1000%;
+        width: 400%;
         /* margin: auto; */
         left:50%;
         right: 50%;
