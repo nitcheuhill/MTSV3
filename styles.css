@@ -51,9 +51,10 @@ body {
 .nav-links li a {
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1rem;
     display: block;
     transition: color 0.3s, background-color 0.3s;
+    
 }
 
 .nav-links li a:hover {
@@ -110,13 +111,13 @@ body {
     display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 875px) {
     .nav-links {
         position: absolute;
         top: 100%;
         left: -100%;
         width: 100%;
-        height: 40vh;
+        height: 50vh;
         background-color: #333;
         flex-direction: column;
         align-items: center;
@@ -126,12 +127,14 @@ body {
         transition: left 0.3s;
         background: linear-gradient(to right, #ff6600, #ffcc00);
     }
+ 
     .navbar{
         background: linear-gradient(to right, #ff6600, #ffcc00);
     }
+ 
     .dropdown-content{
         background:  linear-gradient(to right, #ff6600, #ffcc00);
-        width: 370%;
+        width: 1000%;
         /* margin: auto; */
         left:50%;
         right: 50%;
@@ -159,6 +162,8 @@ body {
     }
 }
 
+
+    
 
 .logo {
     display: flex;
@@ -280,13 +285,14 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 999px) {
     .intro-text{
         margin-top: 1px;
     }
+   
     
 }
-@media (max-width:1080px){
+@media (max-width: 999px){
     .intro-text{
         margin-top: 1px;
 
@@ -351,43 +357,57 @@ body {
 .about-us {
     display: flex; 
     justify-content: space-around;
-    padding: 10px;
+    /* padding: 10px; */
     background: #fff3e0;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-height: 50vh;
-    gap: 15px
-    /* margin:auto; */
+    /* gap: 10px */
+    margin:auto;
 
 }
 
 .description,
 .map {
-    max-width: 700%;
+    /* max-width: 100%; */
     min-width: 50%;
     min-height: 100%;
-    margin-top: 10px;
-}
-
-
-@media (max-width: 985px) {
     
-    .map {
-        width: 100%;
-        height: 70%;
-        /* Adjust for header height */
-    }
-  
+    /* margin-top: 10px; */
 }
-@media (max-width: 768px) {
-    .description {
-        margin-top: 1px;
-        /* Adjust for header height */
-    }
+
+@media (max-width: 999px) {
     .about-us {
         flex-direction: column-reverse; /* Place l'objet droit au-dessus de l'objet gauche */
         align-items: flex-start; /* Alignement des objets en haut */
+        margin: 0px;
     }
+
+}
+
+
+@media (max-width: 999px) {
+    .description {
+        margin-top: 1px;
+        
+        
+        /* Adjust for header height */
+    }
+    .iframecontent{
+        border-bottom-right-radius: 10px;  
+        border-top-left-radius:;
+        
+        
+    }
+  
+    .map{
+        width: 100%;
+        height: 30vh;    
+        /* margin: auto; */
+        
+    }
+
+   
 }
 
 .timeline {
@@ -505,7 +525,7 @@ footer {
     color: #ff6600;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 999px) {
     .intro {
         flex-direction: column;
         align-items: center;
@@ -519,13 +539,6 @@ footer {
     }
 
     
-
-    .description,
-    .map {
-        max-width: 100%;
-        padding: 10px 0;
-        text-align: center;
-    }
 }
 
 
