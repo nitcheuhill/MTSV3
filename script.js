@@ -3,7 +3,7 @@
 
 
 
-
+/*
     
     // Fonction pour interpeller entre deux couleurs
     function interpolateColor(color1, color2, factor) {
@@ -56,7 +56,7 @@
     });
 
 
-
+*/
 // JavaScript pour activer le carrousel de clients
 
     // Récupérer les éléments de produits

@@ -215,6 +215,99 @@ simulations informatiques et la réalisation de votre projet final.
           </li>
         </ul>
       </section>
+      
+
+      <section id="sectionservices">
+        <h1 style="color: #ff6600">Nos Services</h1>
+        <div class="sectionservices-container">
+            <div class="sectionservice-card">
+                <img src="imgSite/imprimerieOffset.jpg" alt="Service 1">
+                <div class="sectionservice-content">
+                    <img src="iconSite/papier.png" alt="Logo 1" class="sectionservice-logo">
+                    
+                    <p>
+                      <a style="font-family: Poppins, sans-serif; color: inherit;"   href="Imprimerie.html">Imprimerie</a>
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="sectionservice-card">
+                <img src="imgSite/broderie.jpg" alt="Service 2">
+                <div class="sectionservice-content">
+                    <img src="iconSite/broderie.png" alt="Logo 2" class="sectionservice-logo">
+                    <p>
+                      <a style="font-family: Poppins, sans-serif; color: inherit;"   href="broderie.html">Broderie</a>
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="sectionservice-card">
+                <img src="imgSite/Serigaphe.jpg" alt="Service 3">
+                <div class="sectionservice-content">
+                    <img src="iconSite/serigraphie.png" alt="Logo 3" class="sectionservice-logo">
+
+                    <p>
+                      <a style="font-family: Poppins, sans-serif; color: inherit;"   href="serigraphie.html">Sérigraphie</a>
+                    </p>
+
+                </div>
+            </div>
+            <div class="sectionservice-card">
+                <img src="imgSite/signalétique.jpg" alt="Service 3">
+                <div class="sectionservice-content">
+                    <img src="iconSite/signaletique.png" alt="Logo 3" class="sectionservice-logo">
+
+                    <p>
+                      <a style="font-family: Poppins, sans-serif; color: inherit;"   href="signaletique.html">Signalétique</a>
+                    </p>
+                </div>
+            </div>
+            <div class="sectionservice-card">
+              <img src="imgSite/tampographie.jpg" alt="Service 3">
+              <div class="sectionservice-content">
+                  <img src="iconSite/tampographie.png" alt="Logo 3" class="sectionservice-logo">
+                  <p>
+                    <a style="font-family: Poppins, sans-serif; color: inherit;"   href="tampographie.html">Tampographie</a>
+                  </p>
+              </div>
+          </div>
+            <div class="sectionservice-card">
+              <img src="imgSite/Packaging.jpg" alt="Service 3">
+              <div class="sectionservice-content">
+                  <img src="iconSite/eco-packaging.png" alt="Logo 3" class="sectionservice-logo">
+
+                  <p>
+                    <a style="font-family: Poppins, sans-serif; color: inherit;"   href="packaging.html">Packaging</a>
+                  </p>
+              </div>
+          </div>
+        </div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const cursor = document.querySelector('.custom-cursor');
+    
+    document.addEventListener('mousemove', function(e) {
+        cursor.style.left = e.pageX + 'px';
+        cursor.style.top = e.pageY + 'px';
+    });
+
+    document.addEventListener('scroll', function() {
+        const sectionserviceCards = document.querySelectorAll('.sectionservice-card');
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        sectionserviceCards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            if (cardTop < triggerBottom) {
+                card.classList.add('show');
+            } else {
+                card.classList.remove('show');
+            }
+        });
+    });
+});
+
+    </script>
 
       <section class="section">
         <h2 style="color: #ff6600">Commandes populaires</h2>
@@ -342,7 +435,8 @@ simulations informatiques et la réalisation de votre projet final.
       style="
         padding: 20px 0;
         text-align: center;
-        background-color: rgb(236, 156, 103);
+        /* background-color: rgb(236, 156, 103); */
+        background-color: #efdfc2;
       "
     >
       <h2 style="color: #ff6600"> Contactez - nous </h2>
