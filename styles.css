@@ -646,7 +646,7 @@ footer {
     }
 
     .product img {
-        height: 150px;
+        height: 200px;
         /* Ajuste la hauteur des images pour les petits écrans */
         object-fit: cover;
         /* Assure que l'image couvre bien l'espace disponible */
@@ -1163,7 +1163,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
     width: 400px;
-    height:55vh ;
+    height:100vh ;
     padding: 20px;
     text-align: left;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -1216,5 +1216,6 @@ footer {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
+        height: 400px;
     }
 }
